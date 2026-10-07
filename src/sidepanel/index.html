@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>スライドを見返す</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="toolbar">
+      <select id="session" aria-label="会議"></select>
+      <button id="delete-session" class="icon danger" title="この会議のスライドをすべて削除" aria-label="この会議を削除">🗑</button>
+    </header>
+
+    <section class="status" aria-live="polite">
+      <span id="status-dot" class="dot"></span>
+      <span id="status-text">確認中…</span>
+      <span class="spacer"></span>
+      <button id="pause" class="small">一時停止</button>
+      <button id="capture" class="small primary" title="今の画面を手動で保存">📸 保存</button>
+    </section>
+
+    <main>
+      <div id="viewer" class="viewer">
+        <img id="current" alt="" hidden />
+        <p id="empty" class="empty">まだスライドがありません。<br />Meet で画面共有が始まると自動で保存されます。</p>
+      </div>
+
+      <nav class="controls">
+        <button id="prev" aria-label="前のスライド">◀</button>
+        <span id="position" class="position">0 / 0</span>
+        <button id="next" aria-label="次のスライド">▶</button>
+        <span class="spacer"></span>
+        <button id="latest" class="small primary" hidden>最新へ ⏭</button>
+        <label class="follow"><input id="follow" type="checkbox" checked /> 最新に追従</label>
+      </nav>
+
+      <div class="actions">
+        <button id="download" class="small">⬇ 画像を保存</button>
+        <button id="delete-slide" class="small danger">このスライドを削除</button>
+      </div>
+
+      <ol id="thumbs" class="thumbs"></ol>
+    </main>
+
+    <script src="index.js"></script>
+  </body>
+</html>

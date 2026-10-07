@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Meet Slide Rewind",
+  "description": "Google Meet の画面共有からスライドを自動保存し、聞き手が手元で見返せるようにします。",
+  "version": "0.1.0",
+  "minimum_chrome_version": "116",
+  "permissions": ["sidePanel", "unlimitedStorage"],
+  "background": { "service_worker": "background/index.js" },
+  "content_scripts": [
+    {
+      "matches": ["https://meet.google.com/*"],
+      "js": ["content/index.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "side_panel": { "default_path": "sidepanel/index.html" },
+  "action": {
+    "default_title": "スライドを見返す",
+    "default_icon": { "16": "icons/16.png", "32": "icons/32.png", "48": "icons/48.png" }
+  },
+  "icons": { "16": "icons/16.png", "32": "icons/32.png", "48": "icons/48.png", "128": "icons/128.png" }
+}
