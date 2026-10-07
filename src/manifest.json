@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Meet Slide Rewind",
+  "name": "Slide Rewind for Google Meet",
   "description": "Google Meet の画面共有からスライドを自動保存し、聞き手が手元で見返せるようにします。",
   "version": "0.1.0",
   "minimum_chrome_version": "116",

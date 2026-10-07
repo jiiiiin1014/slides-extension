@@ -1,4 +1,4 @@
-# Meet Slide Rewind
+# Slide Rewind for Google Meet
 
 Google Meet で他の人の発表を聞いているとき、画面共有のスライドを**自動で保存**し、サイドパネルで**自由に見返せる** Chrome 拡張機能です。
 発表者側の準備やサーバーは不要で、聞き手が入れるだけで動きます。

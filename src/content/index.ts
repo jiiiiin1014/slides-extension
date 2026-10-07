@@ -38,7 +38,7 @@ function currentSession() {
         (r: ResolvedSession) => {
           if (resolving === code) session = { id: r.id, startedAt: r.startedAt, meetingCode: code };
         },
-        (e) => console.warn("[meet-slide-rewind]", e),
+        (e) => console.warn("[slide-rewind]", e),
       ).finally(() => {
         if (resolving === code) resolving = null;
       });
@@ -92,7 +92,7 @@ async function tick() {
     video = picked?.video ?? null;
     if (picked && detector.push(picked.sample, Date.now())) await save(picked.video, picked.sample, false);
   } catch (e) {
-    console.warn("[meet-slide-rewind]", e);
+    console.warn("[slide-rewind]", e);
   } finally {
     busy = false;
     reportStatus();

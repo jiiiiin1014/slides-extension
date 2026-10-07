@@ -95,8 +95,8 @@ function drawBlobs(c, w, h, t) {
 
 const timeline = [
   [3, (c) => { c.fillStyle = "#000"; c.fillRect(0, 0, 1280, 720); }],
-  [7, (c) => drawSlide(c, "1. はじめに", ["Meet Slide Rewind の紹介"])],
-  [7.6, (c, t) => { drawSlide(c, "2. 背景", ["共有画面は戻れない", "聞き手が置いていかれる"]); c.globalAlpha = 1 - (t - 7) / 0.6; drawSlide(c, "1. はじめに", ["Meet Slide Rewind の紹介"]); c.globalAlpha = 1; }],
+  [7, (c) => drawSlide(c, "1. はじめに", ["Slide Rewind の紹介"])],
+  [7.6, (c, t) => { drawSlide(c, "2. 背景", ["共有画面は戻れない", "聞き手が置いていかれる"]); c.globalAlpha = 1 - (t - 7) / 0.6; drawSlide(c, "1. はじめに", ["Slide Rewind の紹介"]); c.globalAlpha = 1; }],
   [11, (c) => drawSlide(c, "2. 背景", ["共有画面は戻れない", "聞き手が置いていかれる"])],
   [14, (c) => drawSlide(c, "2. 背景", ["共有画面は戻れない", "聞き手が置いていかれる", "→ 手元で見返したい"])],
   [18, (c) => drawSlide(c, "3. 仕組み", ["映像を縮小して差分を取る", "1秒静止したら保存", "重複は排除"])],

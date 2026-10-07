@@ -2,6 +2,7 @@ import { changedRatio } from "./image";
 import type { SessionRecord, SlideRecord } from "./messages";
 
 // Used by the service worker (writes) and the side panel (reads/deletes); both run on the extension origin.
+// Kept from the old project name so existing saved slides stay readable.
 const DB_NAME = "meet-slide-rewind";
 const DB_VERSION = 1;
 const SESSIONS = "sessions";

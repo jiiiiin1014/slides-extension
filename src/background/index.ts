@@ -31,7 +31,7 @@ cleanUp().catch(console.error);
 chrome.runtime.onMessage.addListener((msg: RuntimeMessage, _sender, sendResponse) => {
   if (msg.type === "resolve-session") {
     resolveSession(msg.meetingCode, Date.now()).then(sendResponse, (e) => {
-      console.error("[meet-slide-rewind] failed to resolve session", e);
+      console.error("[slide-rewind] failed to resolve session", e);
       const now = Date.now();
       sendResponse({ id: `${msg.meetingCode}@${now}`, startedAt: now });
     });
@@ -39,7 +39,7 @@ chrome.runtime.onMessage.addListener((msg: RuntimeMessage, _sender, sendResponse
   }
   if (msg.type !== "slide-captured") return false;
   handleCapture(msg).then(sendResponse, (e) => {
-    console.error("[meet-slide-rewind] failed to save slide", e);
+    console.error("[slide-rewind] failed to save slide", e);
     sendResponse(null);
   });
   return true;
